@@ -49,13 +49,23 @@
 				    outline: none;
 				    
 				}
+				#contextmenus{
+					width:50%;height: 30px;
+					line-height: 30px;
+					background: #ccc;
+					color:#fff;
+				}
 			</style>
 	    </head>
 	    <body>
 	        <div class='demo' id='demo'  title='this is title'   style="font-size:25px; background-color:#EAEAEA;">
 	             hello zhangyidan
-	        </div>	        
-	        <input type='text' value='搜索'  id="inputText" /> 	        
+	        </div>	 
+	       	<div id="contextmenus">
+	       		你敢在这个区域点击右键吗？双击又会发生什么呢？
+	       	</div>       
+	        <input type='text' value='搜索'  id="inputText" /> 
+	        <p id="change-color">鼠标点击，抬起颜色变化</p>	        
 	    </body>
 	</html>
         
@@ -175,6 +185,19 @@
 				p('我是onmouseout事件下面我要改变我的backgroundColor为EAEAEA');
 				demo.style.backgroundColor='#EAEAEA';
 			}
+
+
+			var contextmenus=document.getElementById("contextmenus");
+			contextmenus.oncontextmenu=function(){
+				alert("算你有胆量");
+			}
+			
+			contextmenus.ondblclick=function(){
+				alert("逗你玩");
+			}
+			
+			var 
+			
 	    
     	});
 
